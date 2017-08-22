@@ -1,0 +1,123 @@
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+overflow-y: scroll;
+}
+
+a:hover {
+  text-decoration: none;
+}
+.content {
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  width: 100%;
+  
+}
+
+/*
+#dribbble {
+  margin: 0 auto;
+  width: 80%;  
+  list-style: outside none none;
+}
+*/
+
+.box {
+  box-shadow: 0 0 4px #3b3a3b;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 10px;
+  height: 284px;
+  margin-bottom: 25px;
+  margin-right: 25px;
+  overflow: hidden;
+  width: 380px;
+}
+.box:first-child {
+  margin-top: 46px;
+}
+
+.box:hover {
+  box-shadow: 0 0 6px black;
+}
+
+
+.box .cover {
+  margin-left: 0;
+  margin-top: -1px;
+  width: 100%;
+}
+
+.box .bar {
+  background: black none repeat scroll 0 0;
+  box-shadow: 0 -2px 3px rgba(255, 255, 255, 0.5);
+  color: white;
+  height: 40px;
+  margin-left: -1px;
+  margin-top: -40px;
+  opacity: 0.8; 
+}
+.box h2 {
+  display: inline;
+  float: left;
+  font-size: 14px;
+  line-height: 40px;
+  margin-left: 15px;
+}
+
+.box i {
+  float: right;
+  margin-right: 3%;
+  margin-top: 9px;
+  width: 20px;
+}
+
+.box span {
+  float: right;
+  margin-right: 3%;
+  margin-top: 13px;
+}
+
+div[id*="modal"] h3 {
+  display: inline;
+  float: left;
+  margin-left: 10px;
+  margin-top: 30px;
+}
+
+div[id*="modal"] p {
+  clear: both;
+  font-size: 14px;
+  margin-left: 15px;
+  margin-right: 10px;
+}
+
+div[id*="modal"] .avatar {
+  display: inline;
+  float: left;
+  margin-bottom: 10px;
+  margin-left: 15px;
+  margin-top: 20px;
+  width: 50px;
+}
+
+@media screen and (max-width: 480px) {
+
+/*
+#dribbble {
+  width: 100%;
+}
+*/
+
+.box {
+  height: 186px;
+  width: 250px;
+}
+.box h2 {
+  font-size: 13px;
+}
+}
