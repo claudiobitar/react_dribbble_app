@@ -105,6 +105,28 @@ div[id*="modal"] .avatar {
   width: 50px;
 }
 
+
+/*----------------MODAL---------------------*/
+
+.modal {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  right: 40px;
+  bottom: 40px;
+  background-color: papayawhip;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rebeccapurple;
+}
+
+
 @media screen and (max-width: 480px) {
 
 /*
