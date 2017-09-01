@@ -4,14 +4,25 @@ import ReactDOM from 'react-dom';
 
 export default class Dribbble extends React.Component {
   constructor(props) {
-    super(props);
-
+    super(props);    
+   
     this.state = { 
-      work: [],
-      hover: false    
-    };
+      work: [],  
+      hover: false,             
+    };     
+    
+    this.handleMouseEnter = this.handleMouseEnter.bind(this);
+    this.handleMouseLeave = this.handleMouseLeave.bind(this);
     
   }  
+
+  handleMouseEnter(){
+    this.setState({ hover: true })
+  }
+
+  handleMouseLeave(){
+    this.setState({ hover: false })
+  }
 
   componentDidMount() {
     this.ShotList();
@@ -24,18 +35,15 @@ export default class Dribbble extends React.Component {
       });
   } 
 
-  render() {
+  render() {  
 
-    let self = this;
-
-    const works = this.state.work.map((val, i) => {
-      return <ul>
-        
-        <li key={i} className="box"          
-          onMouseEnter={() => self.setState({ hover: true })}
-          onMouseLeave={() => self.setState({ hover: false})}
+    const works = this.state.work.map((val, i) => {    
+     
+      return <li key={i} className="box"          
+          onMouseEnter={this.handleMouseEnter}
+          onMouseLeave={this.handleMouseLeave}        
           >    
-          {!self.state.hover ?     
+          {!this.state.hover ?     
             <div>
               <img className="cover" src={val.images.normal} />
               <div className="bar">
@@ -45,7 +53,7 @@ export default class Dribbble extends React.Component {
               </div>
             </div> 
           : null} 
-          {self.state.hover ?
+          {this.state.hover ?
             <div>
               <h3>{val.user.name}</h3>
               <img className="avatar img-circle" src={val.user.avatar_url}/>
@@ -54,11 +62,10 @@ export default class Dribbble extends React.Component {
            :
            null
           }           
-        </li>       
-      </ul>
-    });
+        </li>  
+    });    
 
-    return <div>{works}</div>
+    return <ul>{works}</ul>
   }
 }
 
